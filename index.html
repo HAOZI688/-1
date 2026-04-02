@@ -195,41 +195,17 @@
 <p class="text-on-primary/80 text-sm">构建下一个改变范式的 AI 硬件或软件。</p>
 </div>
 <div class="relative z-10 flex flex-col md:flex-row gap-4">
-<div class="flex items-center gap-4 bg-on-primary/10 backdrop-blur-sm px-6 py-4 rounded-xl flex-1 group/item transition-all cursor-pointer hover:bg-on-primary/20" onclick="openEmailPopup()">
+<div class="flex items-center gap-4 bg-on-primary/10 backdrop-blur-sm px-6 py-4 rounded-xl flex-1 group/item transition-all cursor-pointer hover:bg-on-primary/20" onclick="copyEmail()">
 <span class="material-symbols-outlined" data-icon="mail">mail</span>
 <span class="font-bold">Liwenhaopr@proton.me</span>
-</div>
-<div id="email-popup" class="fixed inset-0 bg-black/80 z-[100] hidden items-center justify-center" onclick="closeEmailPopup()">
-<div class="bg-[#1a1a1a] rounded-2xl p-6 max-w-sm w-full mx-4 border border-[#262626]" onclick="event.stopPropagation()">
-<p class="text-white/60 text-sm mb-2">发送邮件至</p>
-<p class="text-white text-xl font-bold mb-4">Liwenhaopr@proton.me</p>
-<div class="flex gap-3">
-<button onclick="copyEmail()" class="flex-1 py-3 px-4 bg-[#9cff93] text-[#0e0e0e] rounded-xl font-bold hover:bg-[#7ddb7d] transition-colors flex items-center justify-center gap-2">
-<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
-复制
-</button>
-<a href="mailto:Liwenhaopr@proton.me" class="flex-1 py-3 px-4 bg-[#262626] text-white rounded-xl font-bold hover:bg-[#333] transition-colors flex items-center justify-center gap-2">
-<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-发邮件
-</a>
-</div>
-<button onclick="closeEmailPopup()" class="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-[#262626] hover:bg-[#333] flex items-center justify-center text-white/60 hover:text-white transition-colors">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
-</button>
-</div>
 </div>
 <div id="copy-toast" class="fixed bottom-8 left-1/2 -translate-x-1/2 bg-[#9cff93] text-[#0e0e0e] px-6 py-3 rounded-xl font-bold opacity-0 transition-opacity duration-300 pointer-events-none z-[200]">已复制到剪贴板</div>
 <div class="flex items-center gap-4 bg-on-primary/10 backdrop-blur-sm px-6 py-4 rounded-xl flex-1 group/item transition-all cursor-pointer hover:bg-on-primary/20" onclick="openWechatPopup()">
 <span class="material-symbols-outlined" data-icon="chat_bubble">chat_bubble</span>
-<span class="font-bold">WeChat</span>
 </div>
 <div id="wechat-popup" class="fixed inset-0 bg-black/80 z-[100] hidden items-center justify-center" onclick="closeWechatPopup()">
-<div class="bg-white rounded-2xl p-6 max-w-sm w-full mx-4" onclick="event.stopPropagation()">
+<div class="bg-white rounded-2xl p-4 max-w-xs w-full mx-4" onclick="event.stopPropagation()">
 <img class="w-full rounded-lg" src="https://minimax-algeng-chat-tts.oss-cn-wulanchabu.aliyuncs.com/ccv2%2F2026-04-03%2FMiniMax-M2.7%2F2038810364333793983%2Fd21788366e83159e3a8fd71ab423b54230b02f4599e5a00e775f62e98353bc04..jpeg?Expires=1775234957&OSSAccessKeyId=LTAI5tGLnRTkBjLuYPjNcKQ8&Signature=fWJ2Y4aTLyry8zpvZszbJY%2ByqWg%3D" alt="WeChat QR Code"/>
-<div class="text-center mt-4">
-<p class="font-bold text-black text-lg">扫码添加我的微信</p>
-<p class="text-gray-500 text-sm mt-1">期待与你有更多交流与合作</p>
-</div>
 <button onclick="closeWechatPopup()" class="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-gray-200 hover:bg-gray-300 flex items-center justify-center text-gray-600">
 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
 </button>
@@ -256,29 +232,12 @@
 </div>
 </div>
 </section>
-<section class="mt-24 grid grid-cols-1 md:grid-cols-2 gap-8 items-center border-t border-[#131313] pt-24">
-<div>
-<span class="text-primary text-[10px] font-label font-black tracking-[0.3em] uppercase block mb-4">WeChat</span>
-<h2 class="text-4xl font-headline font-bold text-white leading-tight">扫码添加我的微信</h2>
-<p class="text-on-surface-variant text-sm mt-4">期待与你有更多交流与合作。</p>
-</div>
-<div class="flex justify-center">
-<img class="max-w-xs w-full rounded-xl" src="https://minimax-algeng-chat-tts.oss-cn-wulanchabu.aliyuncs.com/ccv2%2F2026-04-03%2FMiniMax-M2.7%2F2038810364333793983%2Fd2d3ed54f92c423af0eb1ff8a43690af4cb7b48edca692ee0f390dd1c7c4b890..png?Expires=1775235902&OSSAccessKeyId=LTAI5tGLnRTkBjLuYPjNcKQ8&Signature=5yLpq2F7jXDlGgO3qGOV0jW8nDE%3D" alt="WeChat QR Code"/>
-</div>
-</section>
 </main>
 <footer class="bg-[#0e0e0e] w-full py-12 px-8 border-t border-[#131313]">
 <div class="flex flex-col md:flex-row justify-between items-center gap-6 max-w-7xl mx-auto font-['Inter'] text-sm leading-relaxed">
 <div class="flex flex-col gap-2">
 <div class="text-lg font-black text-[#9cff93]">智动未来</div>
 <div class="text-[#adaaaa]">© 2024 AI Product Manager &amp; Fitness Enthusiast. 保持进取。</div>
-</div>
-<div class="flex gap-8">
-<a class="text-[#adaaaa] hover:text-white transition-colors opacity-80 hover:opacity-100" href="#">领英</a>
-<a class="text-[#adaaaa] hover:text-white transition-colors opacity-80 hover:opacity-100" href="#">GitHub</a>
-<a class="text-[#adaaaa] hover:text-white transition-colors opacity-80 hover:opacity-100" href="#">知乎</a>
-<a class="text-[#adaaaa] hover:text-white transition-colors opacity-80 hover:opacity-100" href="#">训练计划</a>
-<a class="text-[#adaaaa] hover:text-white transition-colors opacity-80 hover:opacity-100" href="#">隐私政策</a>
 </div>
 </div>
 <div id="lightbox" class="fixed inset-0 bg-black/95 z-[100] hidden flex items-center justify-center" onclick="closeLightbox()">
@@ -343,24 +302,11 @@ function closeWechatPopup() {
     document.body.style.overflow = '';
 }
 
-function openEmailPopup() {
-    document.getElementById('email-popup').classList.remove('hidden');
-    document.getElementById('email-popup').classList.add('flex');
-    document.body.style.overflow = 'hidden';
-}
-
-function closeEmailPopup() {
-    document.getElementById('email-popup').classList.add('hidden');
-    document.getElementById('email-popup').classList.remove('flex');
-    document.body.style.overflow = '';
-}
-
 function copyEmail() {
     navigator.clipboard.writeText('Liwenhaopr@proton.me');
     const toast = document.getElementById('copy-toast');
     toast.style.opacity = '1';
     setTimeout(() => { toast.style.opacity = '0'; }, 2000);
-    closeEmailPopup();
 }
 
 function closeLightbox() {
