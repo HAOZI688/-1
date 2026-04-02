@@ -103,15 +103,8 @@
 </head>
 <body class="bg-background text-on-surface font-body selection:bg-primary selection:text-on-primary">
 <nav class="fixed top-0 w-full z-50 bg-[#0e0e0e]/80 backdrop-blur-md border-b border-[#262626]/20">
-<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto font-['Space_Grotesk'] tracking-tight">
+<div class="flex justify-center items-center px-8 py-4 max-w-7xl mx-auto font-['Space_Grotesk'] tracking-tight">
 <div class="text-xl font-bold tracking-tighter text-[#9cff93]">李文浩 | AI PM</div>
-<div class="hidden md:flex space-x-8">
-<a class="text-[#9cff93] border-b-2 border-[#9cff93] pb-1 hover:text-[#9cff93] transition-colors duration-300" href="#">首页</a>
-<a class="text-[#adaaaa] hover:text-[#9cff93] transition-colors duration-300" href="#">作品集</a>
-<a class="text-[#adaaaa] hover:text-[#9cff93] transition-colors duration-300" href="#">方法论</a>
-<a class="text-[#adaaaa] hover:text-[#9cff93] transition-colors duration-300" href="#">关于我</a>
-</div>
-<a class="bg-primary text-on-primary px-6 py-2 rounded-xl font-bold scale-95 active:scale-90 transition-transform inline-block text-center leading-[2.5rem]" href="tel:13410166529">联系我</a>
 </div>
 </nav>
 <main class="max-w-7xl mx-auto pt-32 pb-20 px-8">
@@ -142,7 +135,7 @@
 <p class="text-on-surface-variant text-sm">重新定义未来健身体验的交互系统原型。</p>
 </div>
 <div class="h-48 w-full mt-4 bg-surface-container-low rounded-lg relative overflow-hidden">
-<div id="portfolio-carousel" class="relative w-full h-full">
+<div id="portfolio-carousel" class="relative w-full h-full cursor-pointer" onclick="openLightbox(currentSlide)">
 <img class="carousel-img absolute inset-0 w-full h-full object-cover transition-opacity duration-500" src="https://minimax-algeng-chat-tts.oss-cn-wulanchabu.aliyuncs.com/ccv2%2F2026-04-03%2FMiniMax-M2.7%2F2038810364333793983%2F05d9d03345ebe785bc5a1dbcdc13ceadc4053c5604a1121ce5b52f573e0c542f..png?Expires=1775236355&OSSAccessKeyId=LTAI5tGLnRTkBjLuYPjNcKQ8&Signature=hN33Y2zQr4BXtqMR7jE%2B%2BtQT0nY%3D" alt="Portfolio 1"/>
 <img class="carousel-img absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500" src="https://minimax-algeng-chat-tts.oss-cn-wulanchabu.aliyuncs.com/ccv2%2F2026-04-03%2FMiniMax-M2.7%2F2038810364333793983%2F38b3f8766e189a5bcfa4fc64171fe63c91036b7f89ff3d0526ca54e7e9a22865..png?Expires=1775236661&OSSAccessKeyId=LTAI5tGLnRTkBjLuYPjNcKQ8&Signature=3aPOxF%2F6iRXjn0N2qcb0Pa8ItsY%3D" alt="Portfolio 2"/>
 <img class="carousel-img absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500" src="https://minimax-algeng-chat-tts.oss-cn-wulanchabu.aliyuncs.com/ccv2%2F2026-04-03%2FMiniMax-M2.7%2F2038810364333793983%2Fbefdc8fdcc9d467859b12c0902cbbabb47bc439599b3918aeaa56e18a80ed653..png?Expires=1775236662&OSSAccessKeyId=LTAI5tGLnRTkBjLuYPjNcKQ8&Signature=n81ta6aalSsWTA16aPdk6D1Dspg%3D" alt="Portfolio 3"/>
@@ -153,7 +146,7 @@
 <img class="carousel-img absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500" src="https://minimax-algeng-chat-tts.oss-cn-wulanchabu.aliyuncs.com/ccv2%2F2026-04-03%2FMiniMax-M2.7%2F2038810364333793983%2F66777887c7a92133141e1c79cccb406d8d59345f5e73f0fdf08ef5e714f890fe..png?Expires=1775236664&OSSAccessKeyId=LTAI5tGLnRTkBjLuYPjNcKQ8&Signature=Rdd32fREAwcDul%2FPrMPPIS%2B05Fk%3D" alt="Portfolio 8"/>
 <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
 <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between">
-<button onclick="prevSlide()" class="w-8 h-8 rounded-full bg-black/50 hover:bg-black/70 flex items-center justify-center text-white transition-colors">
+<button onclick="event.stopPropagation(); prevSlide()" class="w-8 h-8 rounded-full bg-black/50 hover:bg-black/70 flex items-center justify-center text-white transition-colors">
 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
 </button>
 <div class="flex gap-1">
@@ -166,7 +159,7 @@
 <span class="carousel-dot w-2 h-2 rounded-full bg-white/30"></span>
 <span class="carousel-dot w-2 h-2 rounded-full bg-white/30"></span>
 </div>
-<button onclick="nextSlide()" class="w-8 h-8 rounded-full bg-black/50 hover:bg-black/70 flex items-center justify-center text-white transition-colors">
+<button onclick="event.stopPropagation(); nextSlide()" class="w-8 h-8 rounded-full bg-black/50 hover:bg-black/70 flex items-center justify-center text-white transition-colors">
 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
 </button>
 </div>
@@ -208,9 +201,21 @@
 <span class="material-symbols-outlined" data-icon="mail">mail</span>
 <span class="font-bold">Liwenhaopr@proton.me</span>
 </a>
-<div class="flex items-center gap-4 bg-on-primary/10 backdrop-blur-sm px-6 py-4 rounded-xl flex-1 group/item transition-all cursor-pointer">
+<div class="flex items-center gap-4 bg-on-primary/10 backdrop-blur-sm px-6 py-4 rounded-xl flex-1 group/item transition-all cursor-pointer hover:bg-on-primary/20" onclick="openWechatPopup()">
 <span class="material-symbols-outlined" data-icon="chat_bubble">chat_bubble</span>
 <span class="font-bold">WeChat</span>
+</div>
+<div id="wechat-popup" class="fixed inset-0 bg-black/80 z-[100] hidden items-center justify-center" onclick="closeWechatPopup()">
+<div class="bg-white rounded-2xl p-6 max-w-sm w-full mx-4" onclick="event.stopPropagation()">
+<img class="w-full rounded-lg" src="https://minimax-algeng-chat-tts.oss-cn-wulanchabu.aliyuncs.com/ccv2%2F2026-04-03%2FMiniMax-M2.7%2F2038810364333793983%2Fd21788366e83159e3a8fd71ab423b54230b02f4599e5a00e775f62e98353bc04..jpeg?Expires=1775234957&OSSAccessKeyId=LTAI5tGLnRTkBjLuYPjNcKQ8&Signature=fWJ2Y4aTLyry8zpvZszbJY%2ByqWg%3D" alt="WeChat QR Code"/>
+<div class="text-center mt-4">
+<p class="font-bold text-black text-lg">扫码添加我的微信</p>
+<p class="text-gray-500 text-sm mt-1">期待与你有更多交流与合作</p>
+</div>
+<button onclick="closeWechatPopup()" class="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-gray-200 hover:bg-gray-300 flex items-center justify-center text-gray-600">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+</button>
+</div>
 </div>
 </div>
 </div>
@@ -258,12 +263,30 @@
 <a class="text-[#adaaaa] hover:text-white transition-colors opacity-80 hover:opacity-100" href="#">隐私政策</a>
 </div>
 </div>
+<div id="lightbox" class="fixed inset-0 bg-black/95 z-[100] hidden flex items-center justify-center" onclick="closeLightbox()">
+<button onclick="event.stopPropagation(); lightboxPrev()" class="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-colors">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+</button>
+<img id="lightbox-img" class="max-w-[90vw] max-h-[90vh] object-contain" src="" alt=""/>
+<button onclick="event.stopPropagation(); lightboxNext()" class="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-colors">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+</button>
+<button onclick="closeLightbox()" class="absolute top-4 right-4 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-colors">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+</button>
+<div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+<span id="lightbox-counter" class="text-white/60 text-sm">1 / 8</span>
+</div>
+</div>
 </footer>
 <script>
 let currentSlide = 0;
 const totalSlides = 8;
 const carouselImg = document.querySelectorAll('.carousel-img');
 const carouselDot = document.querySelectorAll('.carousel-dot');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const lightboxCounter = document.getElementById('lightbox-counter');
 
 function showSlide(index) {
     if (index >= totalSlides) currentSlide = 0;
@@ -281,7 +304,58 @@ function showSlide(index) {
 function nextSlide() { showSlide(currentSlide + 1); }
 function prevSlide() { showSlide(currentSlide - 1); }
 
+function openLightbox(index) {
+    currentSlide = index;
+    lightboxImg.src = carouselImg[index].src;
+    lightboxCounter.textContent = (index + 1) + ' / ' + totalSlides;
+    lightbox.classList.remove('hidden');
+    lightbox.classList.add('flex');
+    document.body.style.overflow = 'hidden';
+}
+
+function openWechatPopup() {
+    document.getElementById('wechat-popup').classList.remove('hidden');
+    document.getElementById('wechat-popup').classList.add('flex');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeWechatPopup() {
+    document.getElementById('wechat-popup').classList.add('hidden');
+    document.getElementById('wechat-popup').classList.remove('flex');
+    document.body.style.overflow = '';
+}
+
+function closeLightbox() {
+    lightbox.classList.add('hidden');
+    lightbox.classList.remove('flex');
+    document.body.style.overflow = '';
+}
+
+function lightboxNext() {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    lightboxImg.src = carouselImg[currentSlide].src;
+    lightboxCounter.textContent = (currentSlide + 1) + ' / ' + totalSlides;
+}
+function lightboxPrev() {
+    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+    lightboxImg.src = carouselImg[currentSlide].src;
+    lightboxCounter.textContent = (currentSlide + 1) + ' / ' + totalSlides;
+}
+
 // Auto play
-setInterval(nextSlide, 4000);
+let autoPlay = setInterval(nextSlide, 4000);
+
+// Pause auto play on lightbox open
+function pauseAutoPlay() { clearInterval(autoPlay); }
+
+// Resume auto play when lightbox closes
+const observer = new MutationObserver(() => {
+    if (!lightbox.classList.contains('hidden')) {
+        clearInterval(autoPlay);
+    } else {
+        autoPlay = setInterval(nextSlide, 4000);
+    }
+});
+observer.observe(lightbox, { attributes: true, attributeFilter: ['class'] });
 </script>
 </body></html>
