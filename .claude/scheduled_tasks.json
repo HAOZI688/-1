@@ -1,0 +1,11 @@
+{
+  "tasks": [
+    {
+      "id": "a1449437",
+      "cron": "0 9 * * 1",
+      "prompt": "检查网站 d:\\个站\\-1\\index.html 中的外部跳转链接是否可访问：\n1. 抖音: https://www.douyin.com/user/self?from_tab_name=main\n2. GitHub: https://github.com/HAOZI688\n3. 人人都是产品经理: https://www.woshipm.com/u/1674634\n4. Product Hunt: https://www.producthunt.com/@liwehao\n\n请使用 curl 或 WebFetch 检查每个链接是否返回200状态码。如果有链接失效，请在检查结果中报告。",
+      "createdAt": 1775465191396,
+      "recurring": true
+    }
+  ]
+}
