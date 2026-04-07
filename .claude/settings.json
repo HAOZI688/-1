@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(powershell -Command \"Set-Location 'd:\\\\个站\\\\-1\\\\liwenhao.me'; Get-ChildItem -File | Select-Object -ExpandProperty Name\")",
+      "Bash(powershell -Command \"Set-Location 'd:\\\\个站\\\\-1\\\\liwenhao.me'; Rename-Item -LiteralPath \\('�ڰ׻�ɫ��Ƭ��ҵ����Ʒ����վ_01.png'\\) -NewName 'portfolio-01.png'; Rename-Item -LiteralPath \\('�ڰ׻�ɫ��Ƭ��ҵ����Ʒ����վ_02.png'\\) -NewName 'portfolio-02.png'; Rename-Item -LiteralPath \\('�ڰ׻�ɫ��Ƭ��ҵ����Ʒ����վ_03.png'\\) -NewName 'portfolio-03.png'; Rename-Item -LiteralPath \\('�ڰ׻�ɫ��Ƭ��ҵ����Ʒ����վ_04.png'\\) -NewName 'portfolio-04.png'; Rename-Item '20260405-224404.png' -NewName 'portfolio-05.png'; Rename-Item '20260405-224411.png' -NewName 'portfolio-06.png'; Rename-Item '20260405-224416.png' -NewName 'portfolio-07.png'; Rename-Item '20260405-224643.jpg' -NewName 'portfolio-08.jpg'; Rename-Item '20260405-224649.jpg' -NewName 'portfolio-09.jpg'; Rename-Item '20260405-224653.jpg' -NewName 'portfolio-10.jpg'; Rename-Item '20260405-224656.jpg' -NewName 'portfolio-11.jpg'\")",
+      "Bash(powershell -ExecutionPolicy Bypass -File \"d:/个站/-1/liwenhao.me/rename.ps1\")"
+    ]
+  }
+}
